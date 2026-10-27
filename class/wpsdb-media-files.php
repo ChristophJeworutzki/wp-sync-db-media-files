@@ -526,6 +526,7 @@ class WPSDB_Media_Files extends WPSDB_Addon {
 		if( empty( $needle ) || empty( $haystack ) ) return false;
 
 		foreach( $haystack as $key => $value ) {
+			$exists = false;
 			foreach ( $needle as $skey => $svalue ) {
 				$exists = ( isset( $haystack[$key][$skey] ) && $haystack[$key][$skey] === $svalue );
 			}
